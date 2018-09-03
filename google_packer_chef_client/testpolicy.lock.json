@@ -1,0 +1,619 @@
+{
+  "revision_id": "85c032d147ef1e5f155ac39355d7040f4a9a7ab907db819928070977f6b0d178",
+  "name": "testpolicy",
+  "run_list": [
+    "recipe[syseng_base::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "chef-client": {
+      "version": "11.0.0",
+      "identifier": "f3b5a97fe4f47a0041e9f76a60f912a1d82f0e93",
+      "dotted_decimal_identifier": "68598158940501114.72473134129401.20486325997203",
+      "cache_key": "chef-client-11.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-client/versions/11.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-client/versions/11.0.0/download",
+        "version": "11.0.0"
+      }
+    },
+    "cron": {
+      "version": "6.2.0",
+      "identifier": "8fa65311f8e3471f1e405ab3b755d79dee9788ca",
+      "dotted_decimal_identifier": "40433797383643975.8758986026497877.237073312745674",
+      "cache_key": "cron-6.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/cron/versions/6.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/cron/versions/6.2.0/download",
+        "version": "6.2.0"
+      }
+    },
+    "hostsfile": {
+      "version": "3.0.1",
+      "identifier": "4054324c36e266a714e89e9a3d160156a30f592d",
+      "dotted_decimal_identifier": "18106973513245286.47029310436556054.1471614507309",
+      "cache_key": "hostsfile-3.0.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/hostsfile/versions/3.0.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/hostsfile/versions/3.0.1/download",
+        "version": "3.0.1"
+      }
+    },
+    "iptables": {
+      "version": "4.3.4",
+      "identifier": "f22c85827ea7aeb84405a95fb970e90adda48bf0",
+      "dotted_decimal_identifier": "68165896295589806.51866186821908848.256232877493232",
+      "cache_key": "iptables-4.3.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/iptables/versions/4.3.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/iptables/versions/4.3.4/download",
+        "version": "4.3.4"
+      }
+    },
+    "logrotate": {
+      "version": "2.2.0",
+      "identifier": "53e09234a4f73cc13f46d833d2e5075cafddfaa8",
+      "dotted_decimal_identifier": "23609341620057916.54394244012692197.8094668946088",
+      "cache_key": "logrotate-2.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/logrotate/versions/2.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/logrotate/versions/2.2.0/download",
+        "version": "2.2.0"
+      }
+    },
+    "ntp": {
+      "version": "3.5.6",
+      "identifier": "a26b7ccedcd7d32872cea810df16fe3b889fae9b",
+      "dotted_decimal_identifier": "45717130017822675.11385230976933654.279531648691867",
+      "cache_key": "ntp-3.5.6-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ntp/versions/3.5.6/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ntp/versions/3.5.6/download",
+        "version": "3.5.6"
+      }
+    },
+    "ohai": {
+      "version": "5.2.4",
+      "identifier": "f25ccc2e0182ff1ff7b36845f862bfc4ddcaf0a7",
+      "dotted_decimal_identifier": "68218976378913535.8998074198653026.210852255559847",
+      "cache_key": "ohai-5.2.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ohai/versions/5.2.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ohai/versions/5.2.4/download",
+        "version": "5.2.4"
+      }
+    },
+    "openssh": {
+      "version": "2.6.3",
+      "identifier": "f301c26cfb1de9c4ab54a167243662bb0fbab995",
+      "dotted_decimal_identifier": "68400353904369129.55357475408782390.108555562301845",
+      "cache_key": "openssh-2.6.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/openssh/versions/2.6.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/openssh/versions/2.6.3/download",
+        "version": "2.6.3"
+      }
+    },
+    "postfix": {
+      "version": "5.1.1",
+      "identifier": "92cf90f1967a16f7f601b868afb4f1696ae4ffbc",
+      "dotted_decimal_identifier": "41323568035166742.69794806496800692.265435067252668",
+      "cache_key": "postfix-5.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/postfix/versions/5.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/postfix/versions/5.1.1/download",
+        "version": "5.1.1"
+      }
+    },
+    "resolver": {
+      "version": "2.0.1",
+      "identifier": "4bfd03368c0dd6eacba04be10286b4bd7b5c75a3",
+      "dotted_decimal_identifier": "21388813495176662.66089033878536838.198725911475619",
+      "cache_key": "resolver-2.0.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/resolver/versions/2.0.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/resolver/versions/2.0.1/download",
+        "version": "2.0.1"
+      }
+    },
+    "selinux": {
+      "version": "2.1.1",
+      "identifier": "9aff700fcde45d88566b85b0ff7740d91237a6a6",
+      "dotted_decimal_identifier": "43628003180012637.38375616637108087.71301057717926",
+      "cache_key": "selinux-2.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/selinux/versions/2.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/selinux/versions/2.1.1/download",
+        "version": "2.1.1"
+      }
+    },
+    "sudo": {
+      "version": "3.5.3",
+      "identifier": "19ad30c724ec2b76082809c0b769a268a4a92661",
+      "dotted_decimal_identifier": "7227299428887595.33223015307196265.178570322847329",
+      "cache_key": "sudo-3.5.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sudo/versions/3.5.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sudo/versions/3.5.3/download",
+        "version": "3.5.3"
+      }
+    },
+    "sysctl": {
+      "version": "0.9.0",
+      "identifier": "447cefff8803911548889e2b47f039327b329151",
+      "dotted_decimal_identifier": "19277668642456465.5990726117312496.62888978059601",
+      "cache_key": "sysctl-0.9.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sysctl/versions/0.9.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sysctl/versions/0.9.0/download",
+        "version": "0.9.0"
+      }
+    },
+    "syseng_auth": {
+      "version": "1.0.5",
+      "identifier": "fa521a707496bf5ab4c74708a64051366ae35522",
+      "dotted_decimal_identifier": "70459017686980287.25531515887199808.89294163367202",
+      "source": "cookbook/syseng_auth",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_auth.git",
+        "revision": "4a65289c473759701b1500a73ffa75161084b2cc",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_auth"
+      }
+    },
+    "syseng_base": {
+      "version": "1.1.19",
+      "identifier": "fcd54577908c040ece391e5e7e86676dad9b7d5c",
+      "dotted_decimal_identifier": "71166188466506756.4167394391916166.113720761744732",
+      "source": "cookbook/syseng_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_base.git",
+        "revision": "c32bcb1f5e5ab9bab32b7cc791a5b896a7e87f54",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_base"
+      }
+    },
+    "syseng_base_pam": {
+      "version": "1.0.3",
+      "identifier": "3faaac9af1eec67531554362134ca028dc965b45",
+      "dotted_decimal_identifier": "17920581843414726.32986814547628876.176097359977285",
+      "source": "cookbook/syseng_base_pam",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_base_pam.git",
+        "revision": "8c6d04a170a305956fb9f57f3f55b2e008d0beba",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/cloud_support_inspec",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_base_pam"
+      }
+    },
+    "syseng_base_repo": {
+      "version": "1.0.6",
+      "identifier": "3424744f9000c9d4a1614d36316a0b4ef113faf7",
+      "dotted_decimal_identifier": "14676780758597833.59850134341955946.12433679973111",
+      "source": "cookbook/syseng_base_repo",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_base_repo.git",
+        "revision": "64c5a508e338b1351c0855758aa8841400386d44",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_base_repo"
+      }
+    },
+    "syseng_chef_client": {
+      "version": "1.0.2",
+      "identifier": "e6fddf0baa0f5cf66b0fe80e2c2de8855a4956b8",
+      "dotted_decimal_identifier": "65018379058679644.69360560332745773.255659443050168",
+      "source": "cookbook/syseng_chef_client",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_chef_client.git",
+        "revision": "55f7f603f634da9785a6ac9edf1c43a6b436801c",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_chef_client"
+      }
+    },
+    "syseng_dns": {
+      "version": "1.0.8",
+      "identifier": "e8a504a78b55835cbddc409d2811c5b52f1ee404",
+      "dotted_decimal_identifier": "65483634006250883.26104451531876369.217381970306052",
+      "source": "cookbook/syseng_dns",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_dns.git",
+        "revision": "d4307ed1a9b5232a2ec5b0df48c46fba78ebf18f",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_dns"
+      }
+    },
+    "syseng_mail": {
+      "version": "1.0.0",
+      "identifier": "020649e2333d17a74f2ff9641a7fbb19827c84ff",
+      "dotted_decimal_identifier": "569864350809367.47093388576823935.205718237775103",
+      "source": "cookbook/syseng_mail",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_mail.git",
+        "revision": "ad8b4378c3f3f2640f06450c088b4c0be6804b23",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_mail"
+      }
+    },
+    "syseng_misc": {
+      "version": "1.0.10",
+      "identifier": "5a302d95f4a54d4266e3640485b8e11d40b857bc",
+      "dotted_decimal_identifier": "25385720251458893.18690475284530616.247515756124092",
+      "source": "cookbook/syseng_misc",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_misc.git",
+        "revision": "d0cad8e3fff08f9c23e25822445e7a96cfdc4019",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/feature/housekeeping",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_misc"
+      }
+    },
+    "syseng_remote": {
+      "version": "1.0.3",
+      "identifier": "496f88a439f43e02edf9ba190cd1b0afa87a5e55",
+      "dotted_decimal_identifier": "20670305961374782.824606778264785.194268492357205",
+      "source": "cookbook/syseng_remote",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_remote.git",
+        "revision": "8edda58bb7b7a4f13af78e8526d113cdf2cc5842",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_remote"
+      }
+    },
+    "syseng_time": {
+      "version": "1.0.0",
+      "identifier": "19e9628fbf72c8539135a98ef505377d165e9607",
+      "dotted_decimal_identifier": "7293483945521864.23522082730996997.61010385737223",
+      "source": "cookbook/syseng_time",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://src.ent.ea.com/techops_cookbooks/syseng/syseng_time.git",
+        "revision": "df7e89f58b60043794565ffb1df16a52fc1fba03",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbook/syseng_time"
+      }
+    }
+  },
+  "default_attributes": {
+    "server": {
+      "type": "cloud"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef-client",
+        "= 11.0.0"
+      ],
+      [
+        "cron",
+        "= 6.2.0"
+      ],
+      [
+        "hostsfile",
+        "= 3.0.1"
+      ],
+      [
+        "iptables",
+        "= 4.3.4"
+      ],
+      [
+        "logrotate",
+        "= 2.2.0"
+      ],
+      [
+        "ntp",
+        "= 3.5.6"
+      ],
+      [
+        "ohai",
+        "= 5.2.4"
+      ],
+      [
+        "openssh",
+        "= 2.6.3"
+      ],
+      [
+        "postfix",
+        "= 5.1.1"
+      ],
+      [
+        "resolver",
+        "= 2.0.1"
+      ],
+      [
+        "selinux",
+        "= 2.1.1"
+      ],
+      [
+        "sudo",
+        "= 3.5.3"
+      ],
+      [
+        "sysctl",
+        "= 0.9.0"
+      ],
+      [
+        "syseng_auth",
+        "= 1.0.5"
+      ],
+      [
+        "syseng_base",
+        "= 1.1.19"
+      ],
+      [
+        "syseng_base_pam",
+        "= 1.0.3"
+      ],
+      [
+        "syseng_base_repo",
+        "= 1.0.6"
+      ],
+      [
+        "syseng_chef_client",
+        "= 1.0.2"
+      ],
+      [
+        "syseng_dns",
+        "= 1.0.8"
+      ],
+      [
+        "syseng_mail",
+        "= 1.0.0"
+      ],
+      [
+        "syseng_misc",
+        "= 1.0.10"
+      ],
+      [
+        "syseng_remote",
+        "= 1.0.3"
+      ],
+      [
+        "syseng_time",
+        "= 1.0.0"
+      ]
+    ],
+    "dependencies": {
+      "chef-client (11.0.0)": [
+        [
+          "cron",
+          ">= 4.2.0"
+        ],
+        [
+          "logrotate",
+          ">= 1.9.0"
+        ]
+      ],
+      "cron (6.2.0)": [
+
+      ],
+      "hostsfile (3.0.1)": [
+
+      ],
+      "iptables (4.3.4)": [
+
+      ],
+      "logrotate (2.2.0)": [
+
+      ],
+      "ntp (3.5.6)": [
+
+      ],
+      "ohai (5.2.4)": [
+
+      ],
+      "openssh (2.6.3)": [
+        [
+          "iptables",
+          ">= 1.0.0"
+        ]
+      ],
+      "postfix (5.1.1)": [
+
+      ],
+      "resolver (2.0.1)": [
+
+      ],
+      "selinux (2.1.1)": [
+
+      ],
+      "sudo (3.5.3)": [
+
+      ],
+      "sysctl (0.9.0)": [
+        [
+          "ohai",
+          ">= 4.0.0"
+        ]
+      ],
+      "syseng_auth (1.0.5)": [
+        [
+          "sudo",
+          "~> 3.5.3"
+        ],
+        [
+          "sysctl",
+          "= 0.9.0"
+        ]
+      ],
+      "syseng_base (1.1.19)": [
+        [
+          "syseng_auth",
+          "= 1.0.5"
+        ],
+        [
+          "syseng_chef_client",
+          "= 1.0.2"
+        ],
+        [
+          "syseng_dns",
+          "= 1.0.8"
+        ],
+        [
+          "syseng_mail",
+          "= 1.0.0"
+        ],
+        [
+          "syseng_misc",
+          "= 1.0.10"
+        ],
+        [
+          "syseng_base_pam",
+          "= 1.0.3"
+        ],
+        [
+          "syseng_remote",
+          "= 1.0.3"
+        ],
+        [
+          "syseng_base_repo",
+          "= 1.0.6"
+        ],
+        [
+          "syseng_time",
+          "= 1.0.0"
+        ]
+      ],
+      "syseng_base_pam (1.0.3)": [
+
+      ],
+      "syseng_base_repo (1.0.6)": [
+
+      ],
+      "syseng_chef_client (1.0.2)": [
+        [
+          "chef-client",
+          ">= 0.0.0"
+        ]
+      ],
+      "syseng_dns (1.0.8)": [
+        [
+          "resolver",
+          "~> 2.0.1"
+        ],
+        [
+          "hostsfile",
+          "~> 3.0.1"
+        ]
+      ],
+      "syseng_mail (1.0.0)": [
+        [
+          "postfix",
+          "~> 5.1.1"
+        ]
+      ],
+      "syseng_misc (1.0.10)": [
+        [
+          "selinux",
+          "~> 2.1.0"
+        ]
+      ],
+      "syseng_remote (1.0.3)": [
+        [
+          "openssh",
+          "~> 2.6.0"
+        ]
+      ],
+      "syseng_time (1.0.0)": [
+        [
+          "ntp",
+          "~> 3.5.2"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+"provisioners": [
+	 {
+		 "type" : "file",
+		 "source" : "apache.tgz",
+		 "destination" : "/tmp/apache.tgz"
+	 },
+	 {
+		 "type": "shell",
+		 "inline": [
+			 "sudo apt-get update",
+			 "sudo apt-get install wget -y",
+			 "sudo apt-get install curl",
+			 "mkdir /tmp/cookbooks",
+			 "mv /tmp/apache.tgz /tmp/cookbooks/",
+			 "cd /tmp/cookbooks",
+			 "tar -xvzf apache.tgz",
+			 "rm -f apache.tgz",
+			 "sudo wget https://packages.chef.io/files/stable/chefdk/3.0.36/ubuntu/16.04/chefdk_3.0.36-1_amd64.deb -O /tmp/chefdk.deb",
+			 "sudo dpkg -i /tmp/chefdk.deb"
+		 ]
+	 },
+	 {
+		 "type" : "chef-solo",
+		 "cookbook_paths" : ["/tmp/cookbooks"],
+		 "run_list" : ["apache"]
+	 }
+ ],
+	"builders": [{
+		"type": "amazon-ebs",
+		"region": "us-east-1",
+		"vpc_id" : "vpc-012955699104b1621",
+		"subnet_id" : "subnet-08bf58a98ae93e879",
+		"associate_public_ip_address" : "true",
+		"source_ami_filter": {
+			"filters": {
+				"virtualization-type": "hvm",
+				"name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+				"root-device-type": "ebs"
+			},
+			"most_recent": true
+		},
+		"instance_type": "t2.micro",
+		"ssh_username": "ubuntu",
+		"ami_name": "packer-example {{timestamp}}",
+		"launch_block_device_mappings": [{
+			"device_name": "/dev/sda1",
+			"volume_size": 8,
+			"volume_type": "gp2",
+			"delete_on_termination": true
+		}]
+	}]
+}

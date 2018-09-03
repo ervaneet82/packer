@@ -1,0 +1,17 @@
+{
+  "builders": [{
+    "type": "azure-arm",
+    "client_id": "",
+    "client_secret": "",
+    "subscription_id": "",
+    "tenant_id": "",
+    "managed_image_resource_group_name": "acctestRG",
+    "managed_image_name": "myPackerImageVaneet",
+    "os_type": "Linux",
+    "image_publisher": "Canonical",
+    "image_offer": "UbuntuServer",
+    "image_sku": "18.04-LTS",
+    "location": "westus2",
+    "vm_size": "Standard_DS1_v2"
+  }]
+}
